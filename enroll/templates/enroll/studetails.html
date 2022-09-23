@@ -8,6 +8,19 @@
 </head>
 <body>
     <h1>Student Page</h1>
-    {{stu}}
+    {% if stu %}
+        <h1>Show Data</h1>
+        <h1>{{stu}}</h1>
+        {% for st in stu %}
+            {{st.id}}
+            {{st.stuid}}
+            {{st.stuname}}
+            {{st.stuemail}}
+            {{st.stupass}}
+            <br>
+        {% endfor %}
+    {% else %}
+        <h1>No Data</h1>
+    {% endif %}
 </body>
 </html>
